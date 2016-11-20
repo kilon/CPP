@@ -1,8 +1,8 @@
-as yet unclassified
+baselines
 baseline: spec
 	<baseline>
 	spec
 		for: #pharo
 		do:
-			[ spec package: 'CPPBridge'	. 
+			[ spec package: 'CPP'	. 
  ]	

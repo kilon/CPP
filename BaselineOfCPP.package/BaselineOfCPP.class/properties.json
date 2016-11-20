@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "BaselineOf",
-	"category" : "BaselineOfCPPBridge",
+	"category" : "BaselineOfCPP",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
