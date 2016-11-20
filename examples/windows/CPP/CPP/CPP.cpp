@@ -9,13 +9,15 @@
 
 #define BUF_SIZE 256
 TCHAR szName[] = TEXT("MyFileMappingObject");
-TCHAR szMsg[] = TEXT("Message from first process.");
+TCHAR szMsg[] = TEXT("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
+
 
 int _tmain()
 {
 	HANDLE hMapFile;
 	LPCTSTR pBuf;
-
+	void * x;
+	//CreateFileMappingA();
 	hMapFile = CreateFileMapping(
 		INVALID_HANDLE_VALUE,    // use paging file
 		NULL,                    // default security
@@ -49,6 +51,11 @@ int _tmain()
 
 
 	CopyMemory((PVOID)pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
+	_tprintf(TEXT("size of TCHAR : %d \n"), sizeof(TCHAR));
+	_tprintf(TEXT("size of char : %d\n"), sizeof(char));
+	_tprintf(TEXT("size of pBuf : %d\n"), sizeof(pBuf));
+	_tprintf(TEXT("size of void * : %d\n"), sizeof(x));
+	_tprintf(TEXT("size of hMapFile : %d\n"), sizeof(hMapFile));
 	_tprintf(TEXT("Looks like everything went ok :) "));
 	
 	_getch();
