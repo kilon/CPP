@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "kilonAlios 11/8/2016 20:52",
+	"super" : "FFIExternalStructure",
+	"category" : "CPP",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Char3000"
+	],
+	"instvars" : [
+		"array"
+	],
+	"name" : "CPPStruct",
+	"type" : "normal"
+}

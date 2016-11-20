@@ -1,0 +1,27 @@
+{
+	"instance" : { },
+	"class" : {
+		"O_TRUNC" : "kilonAlios 11/9/2016 20:23",
+		"initialize" : "kilonAlios 11/9/2016 20:25",
+		"getStringFromAddress:withSize:" : "kilonAlios 11/9/2016 21:23",
+		"storeStringToSharedMemory" : "kilonAlios 11/9/2016 21:05",
+		"munmap_data:filesize:" : "kilonAlios 11/9/2016 10:55",
+		"writeString:toAdress:" : "kilonAlios 11/9/2016 21:20",
+		"PROT_WRITE" : "kilonAlios 11/9/2016 20:24",
+		"PROT_READ" : "kilonAlios 11/9/2016 20:24",
+		"openFile:flags:" : "kilonAlios 11/9/2016 10:50",
+		"openFile:flags:mode:" : "kilonAlios 11/9/2016 20:13",
+		"O_CREAT" : "kilonAlios 11/9/2016 20:22",
+		"FILEMODE" : "kilonAlios 11/9/2016 20:26",
+		"retrieveSharedValueStep1" : "kilonAlios 11/9/2016 20:05",
+		"memset_startAddress:value:size:" : "kilonAlios 11/9/2016 21:19",
+		"closeFile:" : "kilonAlios 11/8/2016 20:50",
+		"MAP_SHARED" : "kilonAlios 11/9/2016 20:21",
+		"lSeek_fd:range:value:" : "kilonAlios 11/9/2016 10:52",
+		"O_RDWR" : "kilonAlios 11/9/2016 20:22",
+		"write_fd:value:size:" : "kilonAlios 11/9/2016 21:20",
+		"retrieveSharedValueStep2" : "kilonAlios 11/9/2016 13:48",
+		"ffiLibraryName" : "kilonAlios 11/8/2016 20:51",
+		"mmap_adress:fileSize:flag1:flag2:fd:offset:" : "kilonAlios 11/9/2016 11:05"
+	}
+}
