@@ -24,7 +24,7 @@ Playground inside Pharo and do the following command
 
 ```Smalltalk
 Metacello new baseline:
-'CPPBridge' ; repository: 'github://kilon/CPPBridger:master';load.
+'CPP' ; repository: 'github://kilon/CPP:master';load.
 ```
 ---------
 ## How to use it ?
