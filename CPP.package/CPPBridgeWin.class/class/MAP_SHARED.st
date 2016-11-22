@@ -1,0 +1,3 @@
+flags
+MAP_SHARED
+	^ MAP_SHARED

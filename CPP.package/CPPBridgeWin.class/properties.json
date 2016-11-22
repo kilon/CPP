@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "CPP",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ExampleDATA",
+		"FILEMODE",
+		"MAP_SHARED",
+		"O_CREAT",
+		"O_RDWR",
+		"O_TRUNC",
+		"PROT_READ",
+		"PROT_WRITE"
+	],
+	"instvars" : [ ],
+	"name" : "CPPBridgeWin",
+	"type" : "normal"
+}
