@@ -10,8 +10,8 @@
 #include <iostream>
 
 #define BUF_SIZE 256
-TCHAR szName[] = TEXT("m");
-TCHAR szMsg[] = TEXT("m");
+TCHAR szName[] = TEXT("MyFileMappingObject");
+TCHAR szMsg[] = TEXT("hello there baby");
 unsigned short int m2 = 'm';
 char s = 'm';
 

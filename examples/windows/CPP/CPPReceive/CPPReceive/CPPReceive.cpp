@@ -23,7 +23,7 @@ int _tmain()
 	hMapFile = OpenFileMapping(
 		FILE_MAP_ALL_ACCESS,   // read/write access
 		FALSE,                 // do not inherit the name
-		LPCWSTR("MyFileMappingObject"));               // name of mapping object
+		szName);               // name of mapping object
 
 	if (hMapFile == NULL)
 	{
