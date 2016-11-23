@@ -7,6 +7,6 @@ mapViewOfFile_handle: aHandle access: flag bufferSize: buff_size
 		0,
 		0,
 		BUF_SIZE);"
-return := self ffiCall: #( void * MapViewOfFileA (void * aHandle , 0 , int flag , 0  , 0, int buff_size )).
+return := self ffiCall: #( void * MapViewOfFile (void * aHandle , 0 , unsignedLong flag , 0  , 0, unsignedLong buff_size )).
 return = 0 ifTrue: [ self error: 'Error mapping file to memory' ].
 ^return

@@ -20,7 +20,8 @@ instance := CPPBridge new.
 
 "this is the most importan method, this method maps the file to memmory , which means it loads its contents into memory and associates the memory with the file. PROT_READ means we want to write the memory , PROT_WRITE to write the memory and MAP_SHARED is the most importan because it defines the memory area as shared so we can access it from other application"
 
-mmapPointer := CPPBridgeWin createFileMapping_handle: (ExternalAddress fromAddress: (16rFFFFFFFF) )  access: 2  bufferSize: 1000  name:'MySecondFileMappingObject'.
+fdNumber := CPPBridgeWin openFileMapping_access: (16r983071) nameOfMemory: 'm'. 
+mmapPointer := CPPBridgeWin mapViewOfFile_handle: (fdNumber) access: (16r983071) bufferSize: 256. 
 
 "This assigns the pointer to our Pharo structure so we can use it to get the contents of the C structure located in the shared memory"
 "struct := CPPStruct pointTo: (mmapPointer getHandle )."
