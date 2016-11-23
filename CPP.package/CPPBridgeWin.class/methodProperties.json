@@ -2,6 +2,7 @@
 	"instance" : { },
 	"class" : {
 		"O_TRUNC" : "kilonAlios 11/22/2016 18:40",
+		"mapViewOfFile_handle:access:bufferSize:" : "kilonAlios 11/23/2016 19:24",
 		"initialize" : "kilonAlios 11/22/2016 18:40",
 		"getStringFromAddress:withSize:" : "kilonAlios 11/22/2016 18:40",
 		"storeStringToSharedMemory" : "kilonAlios 11/22/2016 18:40",
@@ -16,7 +17,7 @@
 		"retrieveSharedValueStep1" : "kilonAlios 11/22/2016 20:54",
 		"memset_startAddress:value:size:" : "kilonAlios 11/22/2016 18:40",
 		"closeFile:" : "kilonAlios 11/22/2016 18:40",
-		"createFileMapping_handle:access:bufferSize:name:" : "kilonAlios 11/22/2016 20:44",
+		"createFileMapping_handle:access:bufferSize:name:" : "kilonAlios 11/23/2016 10:38",
 		"MAP_SHARED" : "kilonAlios 11/22/2016 18:40",
 		"lSeek_fd:range:value:" : "kilonAlios 11/22/2016 18:40",
 		"O_RDWR" : "kilonAlios 11/22/2016 18:40",

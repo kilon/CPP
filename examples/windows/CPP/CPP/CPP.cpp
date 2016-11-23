@@ -10,8 +10,10 @@
 #include <iostream>
 
 #define BUF_SIZE 256
-TCHAR szName[] = TEXT("MyFileMappingObject");
-TCHAR szMsg[] = TEXT("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
+TCHAR szName[] = TEXT("m");
+TCHAR szMsg[] = TEXT("m");
+long  m2 = 'm';
+char s = 'a';
 
 
 int _tmain()
@@ -19,6 +21,9 @@ int _tmain()
 	HANDLE hMapFile;
 	LPCTSTR pBuf;
 	void * x;
+	
+	
+	
 	//CreateFileMappingA();
 	hMapFile = CreateFileMapping(
 		INVALID_HANDLE_VALUE,    // use paging file
@@ -50,26 +55,47 @@ int _tmain()
 
 		return 1;
 	}
-
-
 	CopyMemory((PVOID)pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
-	_tprintf(TEXT("size of TCHAR : %d \n"), sizeof(TCHAR));
-	_tprintf(TEXT("size of char : %d\n"), sizeof(char));
-	_tprintf(TEXT("size of pBuf : %d\n"), sizeof(pBuf));
-	_tprintf(TEXT("size of void * : %d\n"), sizeof(x));
-	_tprintf(TEXT("size of hMapFile : %d\n"), sizeof(hMapFile));
-	_tprintf(TEXT("size of INVALID_HANDLE_VALUE : %d\n"), sizeof(INVALID_HANDLE_VALUE));
-	//_tprintf(TEXT("size of INVALID_HANDLE_VALUE value : %d\n"), INVALID_HANDLE_VALUE);
-	std::cout<<"type of INVALID_HANDLE_VALUE : " << typeid(INVALID_HANDLE_VALUE).name() <<"\n";
-	std::cout << "value of INVALID_HANDLE_VALUE : " << INVALID_HANDLE_VALUE << "\n";
-	_tprintf(TEXT("size of NULL : %d\n"), sizeof( NULL ));
-	_tprintf(TEXT("size of PAGE_READWRITE : %d\n"), sizeof(PAGE_READONLY));
-	std::cout << "value of PAGE_READWRITE : " << PAGE_READONLY << "\n";
-	std::cout << "type of PAGE_READWRITE : " << typeid(PAGE_READWRITE).name() << "\n";
-	std::cout << "type of szName : " << typeid(szName).name() << "\n";
-	_tprintf(TEXT("size of int : %d\n"), sizeof(int));
-	_tprintf(TEXT("size of unsigned long : %d\n"), sizeof(unsigned long));
-	_tprintf(TEXT("Looks like everything went ok :) "));
+
+	std::cout << "size of TCHAR :" << sizeof(TCHAR) << "\n";
+
+	std::cout << "size of void * : " << sizeof(x) << "\n";
+	std::cout << "value of s : " << int(s) << "\n";
+	std::cout << "size of int : " << sizeof(int) << "\n";
+	std::cout << "size of unsigned long : " << sizeof(unsigned long) << "\n";
+
+	std::cout << "\n********************************** \n\n";
+	std::cout << "(type | size | value ) of INVALID_HANDLE_VALUE : (" << typeid(INVALID_HANDLE_VALUE).name()
+		<< " | " << sizeof(INVALID_HANDLE_VALUE) << " | " << INVALID_HANDLE_VALUE << ")\n"
+
+		<< "(type | size | value ) of hMapFile : (" << typeid(hMapFile).name()
+		<< " | " << sizeof(hMapFile) << " | " << hMapFile << ")\n"
+
+		<< "(type | size | value ) of NULL : (" << typeid(NULL).name()
+		<< " | " << sizeof(NULL) << " | " << NULL << ")\n"
+
+		<< "(type | size | value ) of PAGE_READWRITE : (" << typeid(PAGE_READWRITE).name()
+		<< " | " << sizeof(PAGE_READWRITE) << " | " << PAGE_READWRITE << ")\n"
+
+		<< "(type | size | value ) of FILE_MAP_ALL_ACCESS : (" << typeid(FILE_MAP_ALL_ACCESS).name()
+		<< " | " << sizeof(FILE_MAP_ALL_ACCESS) << " | " << FILE_MAP_ALL_ACCESS << ")\n"
+
+		<< "(type | size | value ) of szName : (" << typeid(szName).name()
+		<< " | " << sizeof(szName) << " | " << szName << ")\n"
+		
+		<< "(type | size | value ) of m2 : (" << typeid(m2).name()
+		<< " | " << sizeof(m2) << " | " << szName << ")\n";;
+	
+	std::cout << "\nvalue of szName reference : " << "[";
+
+	for (int i = 0; i < sizeof(szName) / 2; ++i)
+	{
+		std::cout << " " << szName[i];
+	}
+	
+	std::cout<<"]\n\n*****************************\n";
+
+	std::cout << "\n\n\nLooks like everything went ok :) " << "\n";
 	
 	_getch();
 
