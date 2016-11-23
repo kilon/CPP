@@ -12,8 +12,8 @@
 #define BUF_SIZE 256
 TCHAR szName[] = TEXT("m");
 TCHAR szMsg[] = TEXT("m");
-long  m2 = 'm';
-char s = 'a';
+unsigned short int m2 = 'm';
+char s = 'm';
 
 
 int _tmain()
@@ -57,12 +57,14 @@ int _tmain()
 	}
 	CopyMemory((PVOID)pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
 
-	std::cout << "size of TCHAR :" << sizeof(TCHAR) << "\n";
+	std::cout << "size of TCHAR : " << sizeof(TCHAR) << "\n";
+	std::cout << "size of wchar_t : " << sizeof(wchar_t) << "\n";
 
 	std::cout << "size of void * : " << sizeof(x) << "\n";
 	std::cout << "value of s : " << int(s) << "\n";
 	std::cout << "size of int : " << sizeof(int) << "\n";
 	std::cout << "size of unsigned long : " << sizeof(unsigned long) << "\n";
+	std::cout << "size of unsigned short : " << sizeof(unsigned short) << "\n";
 
 	std::cout << "\n********************************** \n\n";
 	std::cout << "(type | size | value ) of INVALID_HANDLE_VALUE : (" << typeid(INVALID_HANDLE_VALUE).name()
@@ -82,15 +84,22 @@ int _tmain()
 
 		<< "(type | size | value ) of szName : (" << typeid(szName).name()
 		<< " | " << sizeof(szName) << " | " << szName << ")\n"
-		
+
+		<< "(type | size | value ) of szName[0] : (" << typeid(szName[0]).name()
+		<< " | " << sizeof(szName[0]) << " | " << szName[0] << ")\n"
+
 		<< "(type | size | value ) of m2 : (" << typeid(m2).name()
-		<< " | " << sizeof(m2) << " | " << szName << ")\n";;
+		<< " | " << sizeof(m2) << " | " << szName << ")\n"
+
+		<< "(type | size | value ) of s : (" << typeid(s).name()
+		<< " | " << sizeof(s) << " | " << int(s) << ")\n";
+
 	
 	std::cout << "\nvalue of szName reference : " << "[";
-
-	for (int i = 0; i < sizeof(szName) / 2; ++i)
+	unsigned char * byte = (unsigned char*)szName;
+	for (int i = 0; i < sizeof(szName); ++i)
 	{
-		std::cout << " " << szName[i];
+		std::cout << " byte "<<i<<" : " << int(*(byte+i)) << " | ";
 	}
 	
 	std::cout<<"]\n\n*****************************\n";

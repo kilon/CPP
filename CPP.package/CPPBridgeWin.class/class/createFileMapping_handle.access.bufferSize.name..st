@@ -9,6 +9,6 @@ createFileMapping_handle: aHandle access: flag bufferSize: buff_size name: aName
 		0,                       // maximum object size (high-order DWORD)
 		BUF_SIZE,                // maximum object size (low-order DWORD)
 		szName);                 // name of mapping object"
-return := self ffiCall: #( void * CreateFileMappingA (void * aHandle , 0 , unsignedLong flag  , 0  , unsignedLong buff_size , String aName )).
+return := self ffiCall: #( void * CreateFileMappingW (void * aHandle , 0 , int flag  , 0  , unsignedLong buff_size , String aName )).
 return value = 0 ifTrue: [ self error: 'Error mapping file to memory' ].
 ^return
