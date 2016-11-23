@@ -2,7 +2,7 @@
 	"instance" : { },
 	"class" : {
 		"O_TRUNC" : "kilonAlios 11/22/2016 18:40",
-		"mapViewOfFile_handle:access:bufferSize:" : "kilonAlios 11/23/2016 23:17",
+		"mapViewOfFile_handle:access:bufferSize:" : "kilonAlios 11/23/2016 23:49",
 		"initialize" : "kilonAlios 11/22/2016 18:40",
 		"getStringFromAddress:withSize:" : "kilonAlios 11/22/2016 18:40",
 		"storeStringToSharedMemory" : "kilonAlios 11/22/2016 18:40",
@@ -22,7 +22,7 @@
 		"lSeek_fd:range:value:" : "kilonAlios 11/22/2016 18:40",
 		"O_RDWR" : "kilonAlios 11/22/2016 18:40",
 		"write_fd:value:size:" : "kilonAlios 11/22/2016 18:40",
-		"openFileMapping_access:nameOfMemory:" : "kilonAlios 11/23/2016 22:49",
+		"openFileMapping_access:nameOfMemory:" : "kilonAlios 11/23/2016 23:55",
 		"retrieveSharedValueStep2" : "kilonAlios 11/22/2016 18:40",
 		"ffiLibraryName" : "kilonAlios 11/22/2016 18:43",
 		"mmap_adress:fileSize:flag1:flag2:fd:offset:" : "kilonAlios 11/22/2016 19:58"
