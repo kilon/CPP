@@ -11,7 +11,7 @@
 
 #define BUF_SIZE 256
 TCHAR szName[] = TEXT("MyFileMappingObject");
-TCHAR szMsg[] = TEXT("hello there baby");
+TCHAR szMsg[] = TEXT("Hey Pharo , this is C++ , how are you mate ? :) ");
 unsigned short int m2 = 'm';
 char s = 'm';
 
