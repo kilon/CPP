@@ -19,7 +19,7 @@ char s = 'm';
 int _tmain()
 {
 	HANDLE hMapFile;
-	LPCTSTR pBuf;
+	PVOID pBuf;
 	void * x;
 	
 	
@@ -40,7 +40,7 @@ int _tmain()
 	
 		return 1;
 	}
-	pBuf = (LPTSTR)MapViewOfFile(hMapFile,   // handle to map object
+	pBuf = MapViewOfFile(hMapFile,   // handle to map object
 		FILE_MAP_ALL_ACCESS, // read/write permission
 		0,
 		0,
@@ -55,7 +55,7 @@ int _tmain()
 
 		return 1;
 	}
-	CopyMemory((PVOID)pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
+	CopyMemory(pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
 
 	std::cout << "size of TCHAR : " << sizeof(TCHAR) << "\n";
 	std::cout << "size of wchar_t : " << sizeof(wchar_t) << "\n";
@@ -73,6 +73,9 @@ int _tmain()
 		<< "(type | size | value ) of hMapFile : (" << typeid(hMapFile).name()
 		<< " | " << sizeof(hMapFile) << " | " << hMapFile << ")\n"
 
+		<< "(type | size | value ) of pBuf : (" << typeid(pBuf).name()
+		<< " | " << sizeof(pBuf) << " | " << pBuf << ")\n"
+
 		<< "(type | size | value ) of NULL : (" << typeid(NULL).name()
 		<< " | " << sizeof(NULL) << " | " << NULL << ")\n"
 
@@ -80,7 +83,7 @@ int _tmain()
 		<< " | " << sizeof(PAGE_READWRITE) << " | " << PAGE_READWRITE << ")\n"
 
 		<< "(type | size | value ) of FILE_MAP_ALL_ACCESS : (" << typeid(FILE_MAP_ALL_ACCESS).name()
-		<< " | " << sizeof(FILE_MAP_ALL_ACCESS) << " | " << FILE_MAP_ALL_ACCESS << ")\n"
+		<< " | " << sizeof(FILE_MAP_ALL_ACCESS) << " | " <<  FILE_MAP_ALL_ACCESS << ")\n"
 
 		<< "(type | size | value ) of szName : (" << typeid(szName).name()
 		<< " | " << sizeof(szName) << " | " << szName << ")\n"
