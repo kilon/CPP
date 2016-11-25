@@ -1,3 +1,0 @@
-flags
-PROT_WRITE
-	^ PROT_WRITE

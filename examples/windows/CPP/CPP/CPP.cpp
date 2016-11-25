@@ -11,7 +11,7 @@
 
 #define BUF_SIZE 256
 TCHAR szName[] = TEXT("MyFileMappingObject");
-TCHAR szMsg[] = TEXT("Hey Pharo , this is C++ , how are you mate ? :) ");
+TCHAR szMsg[] = TEXT("Hey Pharo , this is C++ , how are you mate ? :)");
 unsigned short int m2 = 'm';
 char s = 'm';
 
@@ -55,7 +55,7 @@ int _tmain()
 
 		return 1;
 	}
-	CopyMemory(pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
+	CopyMemory(pBuf, szMsg, ( sizeof(szMsg)));
 
 	std::cout << "size of TCHAR : " << sizeof(TCHAR) << "\n";
 	std::cout << "size of wchar_t : " << sizeof(wchar_t) << "\n";
@@ -99,10 +99,10 @@ int _tmain()
 
 	
 	std::cout << "\nvalue of szName reference : " << "[";
-	unsigned char * byte = (unsigned char*)szName;
-	for (int i = 0; i < sizeof(szName); ++i)
+	unsigned char * byte = (unsigned char*)szMsg;
+	for (int i = 0; i < sizeof(szMsg); ++i)
 	{
-		std::cout << " byte "<<i<<" : " << int(*(byte+i)) << " | ";
+		std::cout << " byte "<<i<<"| numeric value : " << int(*(byte+i)) << "   | character value : " << *(byte+i) << "\n ";
 	}
 	
 	std::cout<<"]\n\n*****************************\n";

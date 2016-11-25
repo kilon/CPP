@@ -6,13 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [
 		"ExampleDATA",
-		"FILEMODE",
-		"MAP_SHARED",
-		"O_CREAT",
-		"O_RDWR",
-		"O_TRUNC",
-		"PROT_READ",
-		"PROT_WRITE"
+		"FILE_MAP_ALL_ACCESS",
+		"INVALID_HANDLE_VALUE",
+		"PAGE_READWRITE"
 	],
 	"instvars" : [ ],
 	"name" : "CPPBridgeWin",

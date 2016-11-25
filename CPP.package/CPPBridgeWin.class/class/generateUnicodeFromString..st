@@ -1,4 +1,4 @@
-as yet unclassified
+string handling
 generateUnicodeFromString: aString
 |result|
 result := ''.

@@ -1,3 +1,0 @@
-flags
-FILEMODE
-	^ FILEMODE

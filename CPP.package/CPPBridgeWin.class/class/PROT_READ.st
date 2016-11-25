@@ -1,3 +1,0 @@
-flags
-PROT_READ
-	^ PROT_READ
