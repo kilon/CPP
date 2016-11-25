@@ -1,24 +1,25 @@
 {
 	"instance" : { },
 	"class" : {
-		"mapViewOfFile_handle:access:bufferSize:" : "kilonAlios 11/24/2016 02:30",
+		"createFile_path:" : "kilonAlios 11/25/2016 23:03",
+		"mapViewOfFile_handle:access:bufferSize:" : "kilonAlios 11/25/2016 23:05",
 		"initialize" : "kilonAlios 11/25/2016 19:44",
 		"getStringFromAddress:withSize:" : "kilonAlios 11/25/2016 19:33",
-		"storeStringToSharedMemory" : "kilonAlios 11/25/2016 20:00",
+		"storeStringToSharedMemory" : "kilonAlios 11/25/2016 22:49",
 		"writeString:toAdress:" : "kilonAlios 11/22/2016 18:40",
-		"retrieveSharedValueStep1" : "kilonAlios 11/25/2016 20:33",
-		"memset_startAddress:value:size:" : "kilonAlios 11/22/2016 18:40",
+		"retrieveSharedValueStep1" : "kilonAlios 11/25/2016 22:42",
+		"getLastError" : "kilonAlios 11/25/2016 23:04",
 		"FILE_MAP_ALL_ACCESS" : "kilonAlios 11/25/2016 19:44",
 		"INVALID_HANDLE_VALUE" : "kilonAlios 11/25/2016 19:38",
-		"createFileMapping_handle:access:bufferSize:name:" : "kilonAlios 11/25/2016 19:58",
-		"unmapViewOfFile_SharedMemory:" : "kilonAlios 11/25/2016 20:13",
-		"copyMemoryDestination:text:size:" : "kilonAlios 11/24/2016 01:40",
-		"readStringUnicode:" : "kilonAlios 11/25/2016 20:34",
-		"generateUnicodeFromString:" : "kilonAlios 11/24/2016 01:04",
-		"closeHandle:" : "kilonAlios 11/25/2016 20:10",
-		"openFileMapping_access:nameOfMemory:" : "kilonAlios 11/23/2016 23:55",
+		"createFileMapping_handle:access:bufferSize:name:" : "kilonAlios 11/25/2016 23:02",
+		"unmapViewOfFile_SharedMemory:" : "kilonAlios 11/25/2016 23:08",
+		"copyMemoryDestination:text:size:" : "kilonAlios 11/25/2016 23:01",
+		"readStringUnicode:" : "kilonAlios 11/25/2016 23:08",
+		"generateUnicodeFromString:" : "kilonAlios 11/25/2016 23:04",
+		"closeHandle:" : "kilonAlios 11/25/2016 23:01",
+		"openFileMapping_access:nameOfMemory:" : "kilonAlios 11/25/2016 23:07",
 		"PAGE_READWRITE" : "kilonAlios 11/25/2016 19:41",
 		"ffiLibraryName" : "kilonAlios 11/22/2016 18:43",
-		"mmap_adress:fileSize:flag1:flag2:fd:offset:" : "kilonAlios 11/22/2016 19:58"
+		"mmap_adress:fileSize:flag1:flag2:fd:offset:" : "kilonAlios 11/25/2016 23:06"
 	}
 }

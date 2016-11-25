@@ -1,5 +1,6 @@
 file operations
 closeHandle: aPointerToFileMapping
+"closes handles, handles are used for many diffirent things in windows"
 	| return |
 	"BOOL WINAPI CloseHandle(
   _In_ HANDLE hObject

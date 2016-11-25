@@ -1,6 +1,6 @@
 memory operations
 openFileMapping_access: flag nameOfMemory: aName
-	"mmap is responsible for mapping the memory to be shared to a file fd that is used to store the shared memory\"
+	"open and gain access to a shared memory that already exist and we know its name"
 
 	| return |
 	"pBuf = (LPTSTR)MapViewOfFile(hMapFile,   // handle to map object
@@ -9,5 +9,5 @@ FILE_MAP_ALL_ACCESS, 								// read/write permission
 	return := self ffiCall: #(void * OpenFileMappingW #(unsignedLong flag , 0 , String aName)).
 	return value = 0
 		ifTrue: [ self error: 'Error mapping file to memory\' ].
-		return inspect.
+	return inspect.
 	^ return

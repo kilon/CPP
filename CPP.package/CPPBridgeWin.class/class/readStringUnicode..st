@@ -1,7 +1,8 @@
 examples
 readStringUnicode: mmapPointer
+"again this supports windows unicode , this time we read the string and we return it as regular pharo string"
 	| aUnicodeString charIndex endReached |
-	aUnicodeString  := ''.
+	aUnicodeString := ''.
 	endReached := false.
 	charIndex := 1.
 	[ endReached ]
@@ -9,6 +10,6 @@ readStringUnicode: mmapPointer
 				ifTrue: [ (mmapPointer getHandle unsignedCharAt: charIndex + 1) = Character null
 						ifTrue: [ endReached := true ]
 						ifFalse: [ charIndex := charIndex + 1 ] ]
-				ifFalse: [ aUnicodeString  := aUnicodeString  , (mmapPointer getHandle unsignedCharAt: charIndex) asString.
+				ifFalse: [ aUnicodeString := aUnicodeString , (mmapPointer getHandle unsignedCharAt: charIndex) asString.
 					charIndex := charIndex + 1 ] ].
-	^ aUnicodeString 
+	^ aUnicodeString

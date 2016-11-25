@@ -21,12 +21,25 @@ int _tmain()
 	HANDLE hMapFile;
 	PVOID pBuf;
 	void * x;
-	
-	
+	HANDLE hFile;
+	hFile= CreateFile(TEXT("\..\mmap.bin"), // open Two.txt
+		(GENERIC_READ | GENERIC_WRITE),//FILE_APPEND_DATA,         // open for writing
+		 (FILE_SHARE_WRITE | FILE_SHARE_READ),   //FILE_SHARE_READ,       // allow multiple readers
+		NULL,                     // no security
+		OPEN_ALWAYS,              // open or create
+		FILE_ATTRIBUTE_NORMAL,    // normal file
+		NULL);                    // no attr. template
+
+	if (hFile == INVALID_HANDLE_VALUE)
+	{
+		printf("Could not open Two.txt.");
+		_getch();
+		return 1;
+	}
 	
 	//CreateFileMappingA();
 	hMapFile = CreateFileMapping(
-		INVALID_HANDLE_VALUE,    // use paging file
+		hFile,          //INVALID_HANDLE_VALUE,    // use paging file
 		NULL,                    // default security
 		PAGE_READWRITE,          // read/write access
 		0,                       // maximum object size (high-order DWORD)
@@ -105,17 +118,34 @@ int _tmain()
 		std::cout << " byte "<<i<<"| numeric value : " << int(*(byte+i)) << "   | character value : " << *(byte+i) << "\n ";
 	}
 	
-	std::cout<<"]\n\n*****************************\n";
+	std::cout << "]\n\n*****************************\n"
+		<< "(type | size | value ) of (GENERIC_READ | GENERIC_WRITE) : (" << typeid(GENERIC_READ | GENERIC_WRITE).name()
+		<< " | " << sizeof(GENERIC_READ | GENERIC_WRITE) << " | " << (GENERIC_READ | GENERIC_WRITE) << ")\n"
 
-	std::cout << "\n\n\nLooks like everything went ok :) " << "\n";
+		<< "(type | size | value ) of (FILE_SHARE_WRITE | FILE_SHARE_READ) : (" << typeid(FILE_SHARE_WRITE | FILE_SHARE_READ).name()
+		<< " | " << sizeof(FILE_SHARE_WRITE | FILE_SHARE_READ) << " | " << (FILE_SHARE_WRITE | FILE_SHARE_READ) << ")\n"
+
+		<< "(type | size | value ) of (OPEN_ALWAYS) : (" << typeid(OPEN_ALWAYS).name()
+		<< " | " << sizeof(OPEN_ALWAYS) << " | " << (OPEN_ALWAYS) << ")\n"
+
+		<< "(type | size | value ) of (FILE_ATTRIBUTE_NORMAL) : (" << typeid(FILE_ATTRIBUTE_NORMAL).name()
+		<< " | " << sizeof(FILE_ATTRIBUTE_NORMAL) << " | " << (FILE_ATTRIBUTE_NORMAL) << ")\n";
+		
+
 	
-	_getch();
+
+	
 
 	
 
 	UnmapViewOfFile(pBuf);
 
 	CloseHandle(hMapFile);
+	CloseHandle(hFile);
+	
+	std::cout << "\n\n\nLooks like everything went ok :) " << "\n";
+
+	_getch();
 
 	return 0;
 }

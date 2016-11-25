@@ -1,5 +1,6 @@
 memory operations
 unmapViewOfFile_SharedMemory: aPointerToSharedMemory
+"destroy the shared memory"
 	| return |
 	"BOOL WINAPI UnmapViewOfFile(
   _In_ LPCVOID lpBaseAddress // pointet to shared memory 

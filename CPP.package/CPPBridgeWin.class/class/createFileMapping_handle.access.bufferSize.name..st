@@ -1,6 +1,6 @@
 memory operations
 createFileMapping_handle: aHandle access: flag bufferSize: buff_size name: aName
-	"mmap is responsible for mapping the memory to be shared to a file fd that is used to store the shared memory"
+	"this is responsible for mapping the memory to be shared"
 
 	| return |
 	"CreateFileMapping(
