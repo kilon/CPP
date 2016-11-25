@@ -98,11 +98,13 @@ Option b Embeding Pharo inside an executable is impossible and implementing it a
 -----
 # Roadmap 
 
-Currently CPPBridge works only on MacOS , most likely on Linux too (because it uses the Unix architecture) but I will have to test it.
+- [x] Port to Windows 10
+- [ ] Create a protocol of communication via the shared memory
+- [ ] Give the ability to the user to control when data is saved to the file
+- [ ] Provide support for Unreal Game Engine
+- [ ] Provide methods to ease the task of manual memory management
 
-Windows is coming next ASAP, since its my No1 platform for creating commercial games.
 
-Maybe establish a small protocol of communication via the Shared Memory , JSON looks like a good universal format 
 
 -----
 # Thanks
