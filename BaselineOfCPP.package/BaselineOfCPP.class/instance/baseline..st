@@ -4,5 +4,9 @@ baseline: spec
 	spec
 		for: #pharo
 		do:
-			[ spec package: 'CPP'	. 
+			[
+			spec
+				preLoadDoIt: #preload:package:;
+				postLoadDoIt: #postload:package:. 
+			spec package: 'CPP'	. 
  ]	
